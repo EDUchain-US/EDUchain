@@ -1,0 +1,26 @@
+[Unit]
+Description=EDC's distributed currency daemon
+After=network.target
+
+[Service]
+User=EDC
+Group=EDC
+
+Type=forking
+PIDFile=/var/lib/EDCd/EDCd.pid
+
+ExecStart=/usr/bin/EDCd -daemon -pid=/var/lib/EDCd/EDCd.pid \
+          -conf=/etc/EDC/EDC.conf -datadir=/var/lib/EDCd
+
+ExecStop=-/usr/bin/EDC-cli -conf=/etc/EDC/EDC.conf \
+         -datadir=/var/lib/EDCd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

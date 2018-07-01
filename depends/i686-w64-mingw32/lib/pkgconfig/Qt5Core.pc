@@ -1,0 +1,15 @@
+prefix=/home/scott/Desktop/educhain/depends/i686-w64-mingw32
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+host_bins=${prefix}/native/bin
+qt_config=minimal-config small-config medium-config large-config full-config release_tools c++11 accessibility static qpa clock-gettime clock-monotonic getaddrinfo poll_select jpeg png no-gif doubleconversion no-freetype harfbuzz system-zlib dbus openssl-linked concurrent no-qml-debug release
+
+Name: Qt5 Core
+Description: Qt Core module
+Version: 5.7.1
+Libs: -L${libdir} -lQt5Cored 
+Libs.private: -lole32 -luuid -lws2_32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmpr -lz -L/home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libqtpcred.a  
+Cflags: -I${includedir}/QtCore 
+

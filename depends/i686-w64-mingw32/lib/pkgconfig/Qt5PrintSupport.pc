@@ -1,0 +1,14 @@
+prefix=/home/scott/Desktop/educhain/depends/i686-w64-mingw32
+exec_prefix=${prefix}
+libdir=${prefix}/lib
+includedir=${prefix}/include
+
+
+Name: Qt5 PrintSupport
+Description: Qt PrintSupport module
+Version: 5.7.1
+Libs: -L${libdir} -lQt5PrintSupportd 
+Libs.private: -L/home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libQt5Widgetsd.a /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libQt5Guid.a -lgdi32 -lcomdlg32 -loleaut32 -limm32 -lwinmm /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libqtpngd.a /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libqtharfbuzzngd.a /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libQt5Cored.a -lole32 -luuid -lws2_32 -ladvapi32 -lshell32 -luser32 -lkernel32 -lmpr -lz /home/scott/Desktop/educhain/depends/i686-w64-mingw32/lib/libqtpcred.a -lwinspool -lcomdlg32 -lgdi32 -luser32  
+Cflags: -I${includedir}/QtPrintSupport 
+Requires: Qt5Core Qt5Gui Qt5Widgets
+
